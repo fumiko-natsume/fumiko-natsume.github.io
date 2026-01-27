@@ -142,7 +142,7 @@ export default function ResearchPage({ ongoingProjects, completedProjects }: Res
         title="Research"
         subtitle="Exploring new frontiers of knowledge through rigorous academic inquiry and collaborative scholarship."
         tagline="Academic Research"
-        imagePosition="center"
+        focalPoint={{ x: 50, y: 40 }}
         textAlign="left"
       />
 

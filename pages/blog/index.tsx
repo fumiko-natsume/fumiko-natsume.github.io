@@ -118,7 +118,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
         title="Writing"
         subtitle="Thoughts on research, academia, and professional development."
         tagline="Personal Blog"
-        focalPoint={{ x: 50, y: 70 }}
+        focalPoint={{ x: 50, y: 20 }}
         textAlign="left"
       />
 
