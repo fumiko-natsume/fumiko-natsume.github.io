@@ -24,7 +24,7 @@ export const siteConfig = {
   social: {
     linkedin: '',
     github: 'https://github.com/fumiko-natsume',
-    twitter: 'FumikoNatsume',
+    twitter: 'fumikonatsume',
     googleScholar: '',
     researchGate: '',
     orcid: '',
