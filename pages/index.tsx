@@ -198,7 +198,7 @@ export default function Home({
         title={name}
         subtitle={tagline}
         tagline={profile?.institution || 'Academic Researcher'}
-        focalPoint={{ x: 50, y: 0 }}
+        focalPoint={{ x: 50, y: 15 }}
         textAlign="left"
       />
 
