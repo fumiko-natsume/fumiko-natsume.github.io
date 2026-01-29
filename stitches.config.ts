@@ -20,37 +20,45 @@ export const scaleIn = keyframes({
 const stitchesConfig = createStitches({
   theme: {
     colors: {
-      // Semantic tokens (light theme defaults)
-      background: '#ffffff',
-      backgroundSubtle: '#f5f5f7',
-      backgroundElevated: '#ffffff',
-      foreground: '#1d1d1f',
-      foregroundMuted: '#6e6e73',
-      foregroundSubtle: '#86868b',
-      border: '#d2d2d7',
-      borderSubtle: '#e8e8ed',
-      accent: '#0071e3',
-      accentHover: '#0077ed',
+      // Yukitabi Light Mode Palette
+      // Backgrounds
+      background: '#FAFAFA', // Snow (雪)
+      backgroundSubtle: '#F5F3F0', // Mist (霞)
+      backgroundElevated: '#FFFFFF', // Paper (和紙)
+      
+      // Text
+      foreground: '#1A1A1A', // Ink (墨)
+      foregroundMuted: '#6B6B6B', // Charcoal (炭)
+      foregroundSubtle: '#9B9B9B', // Ash (灰)
+      
+      // Borders
+      border: '#E5E2DE', // Silk (絹)
+      borderSubtle: '#E5E2DE',
+      
+      // Accents
+      accent: '#B22222', // Crimson (紅)
+      accentHover: '#9A1D1D',
+      accentSecondary: '#264653', // Indigo (藍)
 
-      // Neutral utility colors
-      black: 'rgba(19, 19, 21, 1)',
-      white: 'rgba(255, 255, 255, 1)',
-      gray: 'rgba(128, 128, 128, 1)',
-      blue: 'rgba(3, 136, 252, 1)',
-      red: 'rgba(249, 16, 74, 1)',
-      yellow: 'rgba(255, 221, 0, 1)',
-      pink: 'rgba(232, 141, 163, 1)',
-      turq: 'rgba(0, 245, 196, 1)',
-      orange: 'rgba(255, 135, 31, 1)',
-      copy: 'rgba(170, 170, 175, 1)',
-      green: 'rgba(34, 197, 94, 1)',
-      purple: 'rgba(139, 92, 246, 1)',
+      // Utility colors (keeping some for compatibility)
+      black: '#1A1A1A',
+      white: '#FFFFFF',
+      gray: '#6B6B6B',
+      blue: '#3A86A8', // Sky
+      red: '#CC3333', // Vermilion
+      yellow: '#D4740A', // Persimmon
+      pink: '#B22222', // Using crimson
+      turq: '#4A8FA8', // Indigo Light for contrast
+      orange: '#D4740A', // Persimmon
+      copy: '#6B6B6B', // Charcoal
+      green: '#606C38', // Matcha
+      purple: '#264653', // Indigo
 
-      // Status colors
-      success: 'rgba(34, 197, 94, 1)',
-      warning: 'rgba(245, 158, 11, 1)',
-      error: 'rgba(239, 68, 68, 1)',
-      info: 'rgba(59, 130, 246, 1)',
+      // Semantic colors (Yukitabi system)
+      success: '#606C38', // Matcha
+      warning: '#D4740A', // Persimmon
+      error: '#CC3333', // Vermilion
+      info: '#3A86A8', // Sky
     },
     fonts: {
       sans: '-apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, "Segoe UI", Roboto, sans-serif',
@@ -84,21 +92,22 @@ const stitchesConfig = createStitches({
       wide: '0.012em',
     },
     space: {
-      1: '4px',
-      2: '8px',
-      3: '12px',
-      4: '16px',
-      5: '20px',
-      6: '24px',
-      7: '32px',
-      8: '40px',
-      9: '48px',
-      10: '56px',
-      11: '64px',
-      12: '80px',
-      13: '96px',
-      14: '120px',
-      15: '160px',
+      // Yukitabi spacing system (8pt base)
+      1: '2px',  // xxs
+      2: '4px',  // xs
+      3: '8px',  // sm (base unit)
+      4: '16px', // md
+      5: '24px', // lg
+      6: '32px', // xl
+      7: '48px', // xxl
+      8: '64px', // Extended
+      9: '96px', // Section gap
+      10: '120px',
+      11: '160px',
+      12: '200px',
+      13: '240px',
+      14: '320px',
+      15: '400px',
     },
     sizes: {
       1: '4px',
@@ -122,19 +131,20 @@ const stitchesConfig = createStitches({
     },
     radii: {
       1: '4px',
-      2: '8px',
-      3: '12px',
+      2: '8px',  // Small buttons, inputs, chips
+      3: '12px', // Cards, standard containers
       4: '16px',
-      5: '20px',
-      6: '24px',
-      round: '9999px',
+      5: '20px', // Large cards, modal sheets
+      6: '28px', // Full-screen sheets (top only)
+      round: '9999px', // Circular (avatars, dots)
     },
     shadows: {
-      sm: '0 1px 2px rgba(0, 0, 0, 0.04)',
-      md: '0 4px 12px rgba(0, 0, 0, 0.08)',
-      lg: '0 8px 24px rgba(0, 0, 0, 0.12)',
-      card: '0 2px 8px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06)',
-      cardHover: '0 4px 16px rgba(0, 0, 0, 0.08), 0 16px 48px rgba(0, 0, 0, 0.12)',
+      // Minimal shadow usage — prefer border definition over shadows (Yukitabi principle)
+      sm: 'none', // No shadow for small elements
+      md: '0 1px 3px rgba(0, 0, 0, 0.08)', // Subtle for floating elements
+      lg: '0 4px 12px rgba(0, 0, 0, 0.12)', // Medium for modals
+      card: 'none', // Cards use borders instead
+      cardHover: '0 1px 3px rgba(0, 0, 0, 0.08)', // Very subtle hover
       navbar: '0 1px 0 rgba(0, 0, 0, 0.1)',
     },
     transitions: {
@@ -260,26 +270,42 @@ export const {
 // Re-export keyframes for components that import it
 export { keyframes } from '@stitches/react';
 
-// Dark theme with inverted semantic tokens
+// Yukitabi Dark Mode
 export const darkTheme = createTheme('dark', {
   colors: {
-    background: '#000000',
-    backgroundSubtle: '#1d1d1f',
-    backgroundElevated: '#2d2d2f',
-    foreground: '#f5f5f7',
-    foregroundMuted: '#a1a1a6',
-    foregroundSubtle: '#6e6e73',
-    border: '#424245',
-    borderSubtle: '#38383d',
-    accent: '#2997ff',
-    accentHover: '#0077ed',
+    // Yukitabi Dark Mode Palette
+    // Backgrounds
+    background: '#121212', // Night (夜)
+    backgroundSubtle: '#2A2A2A', // Deep (深)
+    backgroundElevated: '#1E1E1E', // Dark Wood (黒檀)
+    
+    // Text
+    foreground: '#ECECEC', // Moon (月)
+    foregroundMuted: '#A0A0A0', // Silver (銀)
+    foregroundSubtle: '#6B6B6B', // Charcoal for subtle text
+    
+    // Borders
+    border: '#3A3A3A', // Charcoal borders
+    borderSubtle: '#3A3A3A',
+    
+    // Accents
+    accent: '#D4443C', // Crimson Light
+    accentHover: '#E04545',
+    accentSecondary: '#4A8FA8', // Indigo Light
+    
+    // Semantic colors (dark versions)
+    success: '#7A8C4A', // Matcha dark
+    warning: '#E68A1A', // Persimmon dark
+    error: '#E04545', // Vermilion dark
+    info: '#5AA8CA', // Sky dark
   },
   shadows: {
-    sm: '0 1px 2px rgba(0, 0, 0, 0.2)',
-    md: '0 4px 12px rgba(0, 0, 0, 0.3)',
-    lg: '0 8px 24px rgba(0, 0, 0, 0.4)',
-    card: '0 2px 8px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.25)',
-    cardHover: '0 4px 16px rgba(0, 0, 0, 0.3), 0 16px 48px rgba(0, 0, 0, 0.4)',
+    // Minimal shadow usage in dark mode too
+    sm: 'none',
+    md: '0 1px 3px rgba(0, 0, 0, 0.3)', // Slightly stronger for dark mode
+    lg: '0 4px 12px rgba(0, 0, 0, 0.4)', // Medium for modals
+    card: 'none', // Cards use borders instead
+    cardHover: '0 1px 3px rgba(0, 0, 0, 0.3)',
     navbar: '0 1px 0 rgba(255, 255, 255, 0.1)',
   },
 });
